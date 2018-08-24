@@ -19,20 +19,23 @@ class Calculator
     end
 
     def divide(value1,value2)
-        value1.to_f / value2 #.to_f Returns the result of interpreting leading characters in str as a floating point number. 
+        value1.to_f / value2 #.to_f Returns the result of interpreting leading characters in str as a floating point number. else 10/11 would be 0 and not .90
     end
 end
 
 # Create a class to model an elevator
 class Elevator
     attr_reader :floor #making floor a readiable attribute.
-        
+    def initialize(floor) #making an instance variable of floor
+        @floor =floor
+    end
+   
     def go_up
-        @floor +=1 #increment the floor!
+        @floor +=1 unless @floor ==12#increment the floor! unless you are on floor #12
          cheery_greeting #call the method to get the greeting!
     end
     def go_down
-        @floor -=1 #decrement the floor!
+        @floor -=1 unless @floor ==1 #decrement the floor, unless you are on floor #1
          cheery_greeting           
     end
 
