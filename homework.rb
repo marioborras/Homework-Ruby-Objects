@@ -19,7 +19,7 @@ class Calculator
     end
 
     def divide(value1,value2)
-        value1 / value2
+        value1.to_f / value2 #.to_f Returns the result of interpreting leading characters in str as a floating point number. 
     end
 end
 
