@@ -25,9 +25,8 @@ end
 
 # Create a class to model an elevator
 class Elevator
-    def floor=(floor) #making floor a readiable attribute.
-        @floor = floor 
-    end
+    attr_reader :floor #making floor a readiable attribute.
+        
     def go_up
         @floor +=1 #increment the floor!
          cheery_greeting #call the method to get the greeting!
@@ -36,9 +35,7 @@ class Elevator
         @floor -=1 #decrement the floor!
          cheery_greeting           
     end
-    def floor
-        @floor 
-    end
+
     def cheery_greeting
         puts "You are on floor number #{@floor}."
      end
